@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ovulation_Calculation_Project</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ovulation and Menstrual Cycle Tracker</h1>
+      <div class="input-fields">
+        <div class="form-group">
+          <label for="start-date">First day of last period:</label>
+          <input type="date" id="start-date" name="start-date" />
+        </div>
+        <div class="form-group">
+          <label for="cycle-length">Average cycle length:</label>
+          <input
+            type="number"
+            id="cycle-length"
+            name="cycle-length"
+            min="20"
+            max="60"
+            step="1"
+            value="28"
+          />
+        </div>
+        <div class="form-group">
+          <label for="luteal-phase">Length of luteal phase:</label>
+          <input
+            type="number"
+            id="luteal-phase"
+            name="luteal-phase"
+            min="10"
+            max="20"
+            step="1"
+            value="14"
+          />
+        </div>
+      </div>
+      <button type="button" onclick="calculateCycle()">Calculate</button>
+      <div id="output"></div>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
